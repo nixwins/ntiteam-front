@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './components/app';
+import LordService from './services/lord-service';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+
+const lordService = new LordService();
+lordService.getAllLords().then((planets) => {
+    console.log(planets);
+})
+
+// lordService.deletePlanet(136).then((json) => {
+//     console.log("created", json);
+// });
+ReactDOM.render(<App />, document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
