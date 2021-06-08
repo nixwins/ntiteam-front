@@ -40,8 +40,8 @@ export default class LordService {
         });
     }
 
-    createPlanet = async (name) => {
-        return await this.getResource('/planets/create', "POST", { name });
+    createPlanet = async (name, lordId) => {
+        return await this.getResource('/planets/create', "POST", { name, lordId });
     }
 
     setPlanetLord = async (id, lordId) => {

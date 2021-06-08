@@ -1,0 +1,15 @@
+.list-group{
+    max-width:640px;
+    width:100%;
+    margin-top:20px;
+    
+}
+
+.list-group-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-group-item span{
+    cursor: pointer;
+}
