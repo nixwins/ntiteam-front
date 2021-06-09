@@ -31,6 +31,7 @@ export default function LordPage() {
         }
 
     }
+
     useEffect(() => {
 
         updateLords();

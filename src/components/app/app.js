@@ -1,7 +1,7 @@
 import React from 'react';
 import LordPage from '../lord-page';
 import Navigation from '../nav';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './app.css';
 import PlanetPage from '../planet-page';
 
@@ -15,6 +15,7 @@ export default function App() {
                 <Switch>
                     <LordPage exact path="/lord-page" />
                     <PlanetPage exact path="/planet-page" />
+                    <Route exact path="/" component={LordPage} />
                 </Switch>
 
 
