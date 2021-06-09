@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import LordService from '../../services/lord-service';
 
-export default function PlanetAdd({ updatePlanets }) {
+export default function PlanetAdd({ updateLocalPlanets }) {
 
     const lordService = new LordService();
     const [name, setName] = useState(null);
-    const [lordId, setLordId] = useState(0);
+    const [lordId, setLordId] = useState(null);
 
     const onItemAdd = (event) => event.preventDefault();
     const onNameInputChange = (e) => setName(e.target.value);
@@ -16,7 +16,7 @@ export default function PlanetAdd({ updatePlanets }) {
         console.log(lordId)
         if (name !== null) {
             lordService.createPlanet(name, lordId).then((json) => {
-                updatePlanets(json)
+                updateLocalPlanets(json)
                 console.log(json)
 
             });

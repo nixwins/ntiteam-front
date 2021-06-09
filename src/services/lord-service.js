@@ -1,6 +1,6 @@
 export default class LordService {
 
-    _baseURL = 'http://localhost:8080/api/v1';
+    _baseURL = 'https://ntiteam-rest.herokuapp.com/api/v1';
 
     getResource = async (resource, method = "GET", body) => {
 
@@ -45,7 +45,7 @@ export default class LordService {
     }
 
     setPlanetLord = async (id, lordId) => {
-        return await this.getResource('/planets', "PUT", { id, lordId });
+        return await this.getResource('/planets/setlord', "PUT", { id, lordId });
     }
 
     deletePlanet = async (id) => {
