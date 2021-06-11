@@ -33,9 +33,10 @@ export default function PlanetAdd({ updateLocalPlanets }) {
                     onChange={onNameInputChange}
                     required />
                 <input
-                    type="text"
+                    type="number"
                     className="form-control"
                     onChange={onLordIdInputChange}
+                    placeholder="Input Lord id"
                 />
                 <button
                     className="btn btn-success"
